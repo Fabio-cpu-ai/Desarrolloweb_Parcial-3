@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Militar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="Img/hospital.png" type="image/x-icon">
+</head>
+
+<script>
+function mostrarServicio(servicio) {
+    const info = {
+        consulta: `<h2>Consulta médica</h2>
+            <p>Atención personalizada por médicos generales y especialistas para el diagnóstico y tratamiento de enfermedades agudas y crónicas.</p>
+            <ul>
+                <li>Evaluación clínica completa</li>
+                <li>Control de enfermedades crónicas (diabetes, hipertensión, etc.)</li>
+                <li>Atención pediátrica y de adultos</li>
+                <li>Orientación sobre prevención y promoción de la salud</li>
+            </ul>
+            <p><strong>Horario:</strong> Lunes a Viernes, 7:00 am - 5:00 pm</p>
+            <p><strong>Ubicación:</strong> Consultorios generales, primer nivel</p>`,
+
+        laboratorio: `<h2>Laboratorio</h2>
+            <p>Realización de exámenes clínicos con tecnología moderna y personal capacitado.</p>
+            <ul>
+                <li>Exámenes de sangre (hemograma, glucosa, lípidos, etc.)</li>
+                <li>Pruebas de orina y heces</li>
+                <li>Perfil tiroideo y pruebas hormonales</li>
+                <li>Pruebas de embarazo y marcadores tumorales</li>
+            </ul>
+            <p><strong>Horario:</strong> Lunes a Sábado, 6:30 am - 2:00 pm</p>
+            <p><strong>Ubicación:</strong> Laboratorio clínico, segundo nivel</p>`,
+
+        farmacia: `<h2>Farmacia</h2>
+            <p>Dispensación de medicamentos recetados y productos de salud, con asesoría profesional.</p>
+            <ul>
+                <li>Medicamentos genéricos y de marca</li>
+                <li>Venta de insumos médicos y productos de cuidado personal</li>
+                <li>Orientación sobre uso y dosificación de medicamentos</li>
+                <li>Atención a recetas de médicos internos y externos</li>
+            </ul>
+            <p><strong>Horario:</strong> Lunes a Domingo, 7:00 am - 8:00 pm</p>
+            <p><strong>Ubicación:</strong> Área de farmacia, planta baja</p>`,
+
+        rayosx: `<h2>Rayos X</h2>
+            <p>Servicios de radiología para estudios de diagnóstico por imágenes, realizados por personal calificado.</p>
+            <ul>
+                <li>Radiografías de tórax, abdomen y extremidades</li>
+                <li>Estudios contrastados</li>
+                <li>Interpretación por radiólogos certificados</li>
+                <li>Entrega rápida de resultados</li>
+            </ul>
+            <p><strong>Horario:</strong> Lunes a Viernes, 8:00 am - 4:00 pm</p>
+            <p><strong>Ubicación:</strong> Departamento de Rayos X, tercer nivel</p>`,
+
+        ultrasonido: `<h2>Ultrasonido</h2>
+            <p>Ecografías y ultrasonidos para el diagnóstico de diversas condiciones médicas.</p>
+            <ul>
+                <li>Ultrasonido abdominal, pélvico y obstétrico</li>
+                <li>Ecocardiogramas y estudios vasculares</li>
+                <li>Ultrasonido de partes blandas y musculoesquelético</li>
+                <li>Atención por médicos especialistas en imagenología</li>
+            </ul>
+            <p><strong>Horario:</strong> Lunes a Viernes, 8:00 am - 3:00 pm</p>
+            <p><strong>Ubicación:</strong> Sala de ultrasonido, tercer nivel</p>`
+    };
+    document.getElementById('servicio-info').innerHTML = info[servicio] || '<h2>Servicio no encontrado</h2>';
+} 
+</script>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+
+                <li>
+                    <a href="servicios_medicos.html">Servicios médicos</a>
+                    <div>
+                        <ul>
+                            <li><a href="#" onclick="mostrarServicio('consulta')">Consulta médica</a></li>
+                            <li><a href="#" onclick="mostrarServicio('laboratorio')">Laboratorio</a></li>
+                            <li><a href="#" onclick="mostrarServicio('farmacia')">Farmacia</a></li>
+                            <li><a href="#" onclick="mostrarServicio('rayosx')">Rayos X</a></li>
+                            <li><a href="#" onclick="mostrarServicio('ultrasonido')">Ultrasonido</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="nuestros_medicos.html">Nuestros médicos</a>
+                    <div>
+                        <ul>
+                            <li><a href="#">Dr. Maynor López</a></li>
+                            <li><a href="#">Dra. Ana Pérez</a></li>
+                            <li><a href="#">Dr. Juan García</a></li>
+                            <li><a href="#">Dra. María López</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="para_pacientes.html">Para pacientes</a>
+                    <div>
+                        <ul>
+                            <li><a href="#">Citas médicas</a></li>
+                            <li><a href="#">Resultados de laboratorio</a></li>
+                            <li><a href="#">Recetas médicas</a></li>
+                            <li><a href="#">Información de seguros</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="sistema_de_gestiones.html">Sistema de gestiones</a>
+                    <div>
+                        <ul>
+                            <li><a href="../DevWeb_1/medicos.php">Médicos</a></li>
+                            <li><a href="../DevWeb_1/pacientes.php">Pacientes</a></li>
+                            <li><a href="../DevWeb_1/historial_medico.php">Historial Médico</a></li>
+                            <li><a href="../DevWeb_1/especialidades.php">Especialidades</a></li>
+                            <li><a href="../DevWeb_1/citas.php">Citas</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="informacion.html">Información</a>
+                    <div>
+                        <ul>
+                            <li><a href="#">Historia del hospital</a></li>
+                            <li><a href="#">Misión y visión</a></li>
+                            <li><a href="#">Valores</a></li>
+                            <li><a href="#">Ubicación</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido principal -->
+<main>
+    <div class="info-box-index" id="servicio-info" style="min-height:180px;">
+        <h2>Selecciona un servicio médico para ver la información.</h2>
+    </div>
+</main>
+    <!-- encabezado secundario -->
+    <footer>
+    <p>&copy; 2025 Repaso HTML CSS. Todos los derechos reservados.</p>
+    <p>LMH - Programación</p>
+    <p> Contacto <a href="mailto:fabiolui1966@gmail.com">fabiolui1966@gmail.com</a></p>
+</footer>
+</body>
+
+</html>

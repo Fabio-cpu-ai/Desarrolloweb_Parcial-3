@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Militar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="Img/hospital.png" type="image/x-icon">
+</head>
+
+<script>
+function mostrarInfo(opcion) {
+    const info = {
+        historia: `<h2>Historia del hospital</h2>
+            <p>El Hospital Militar SPS fue fundado en 1985 con el objetivo de brindar atención médica de calidad a los miembros de las Fuerzas Armadas y sus familias. A lo largo de los años, ha abierto sus puertas a la comunidad en general, convirtiéndose en un referente de salud en la región norte del país. Sus modernas instalaciones y su equipo humano han permitido la evolución constante de los servicios ofrecidos.</p>
+            <p>Actualmente, el hospital cuenta con múltiples especialidades, tecnología de punta y un compromiso permanente con la excelencia médica y la atención humanizada.</p>`,
+
+        mision: `<h2>Misión y visión</h2>
+            <p><strong>Misión:</strong> Ofrecer servicios de salud eficientes, humanos y accesibles, promoviendo la prevención, el diagnóstico y el tratamiento oportuno de las enfermedades, con ética y profesionalismo.</p>
+            <p><strong>Visión:</strong> Ser el hospital líder en la región, reconocido por su excelencia médica, innovación y compromiso con la sociedad.</p>`,
+
+        valores: `<h2>Valores</h2>
+            <ul>
+                <li><strong>Compromiso:</strong> Dedicación total al bienestar de los pacientes.</li>
+                <li><strong>Respeto:</strong> Trato digno y cordial a cada persona.</li>
+                <li><strong>Ética:</strong> Actuar con integridad y responsabilidad profesional.</li>
+                <li><strong>Responsabilidad:</strong> Cumplimiento de deberes y promesas.</li>
+                <li><strong>Trabajo en equipo:</strong> Colaboración entre todas las áreas para un mejor servicio.</li>
+                <li><strong>Calidad humana:</strong> Empatía y calidez en la atención.</li>
+            </ul>`,
+
+        ubicacion: `<h2>Ubicación</h2>
+            <p>El Hospital Militar SPS está ubicado en la ciudad de San Pedro Sula, en una zona de fácil acceso y con amplias instalaciones para la comodidad de pacientes y visitantes.</p>
+            <ul>
+                <li><strong>Dirección:</strong> Colonia Militar, 2da Avenida, San Pedro Sula, Honduras.</li>
+                <li><strong>Teléfono:</strong> <a href="tel:+50412345678">+504 1234-5678</a></li>
+                <li><strong>Correo electrónico:</strong> <a href="mailto:info@hospitalmilitar.com">info@hospitalmilitar.com</a></li>
+            </ul>
+            <iframe src="https://www.google.com/maps?q=Hospital+Militar+San+Pedro+Sula&output=embed" width="100%" height="250" style="border:0; border-radius:10px; margin-top:10px;" allowfullscreen="" loading="lazy"></iframe>`
+    };
+    document.getElementById('info-content').innerHTML = info[opcion] || '<h2>Opción no encontrada</h2>';
+}
+</script>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+
+                <li>
+                    <a href="servicios_medicos.html">Servicios médicos</a>
+                    <div>
+                        <ul>
+                            <li><a href="#">Consulta médica</a></li>
+                            <li><a href="#">Laboratorio</a></li>
+                            <li><a href="#">Farmacia</a></li>
+                            <li><a href="#">Rayos X</a></li>
+                            <li><a href="#">Ultrasonido</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="nuestros_medicos.html">Nuestros médicos</a>
+                    <div>
+                        <ul>
+                            <li><a href="#">Dr. Maynor López</a></li>
+                            <li><a href="#">Dra. Ana Pérez</a></li>
+                            <li><a href="#">Dr. Juan García</a></li>
+                            <li><a href="#">Dra. María López</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="para_pacientes.html">Para pacientes</a>
+                    <div>
+                        <ul>
+                            <li><a href="#">Citas médicas</a></li>
+                            <li><a href="#">Resultados de laboratorio</a></li>
+                            <li><a href="#">Recetas médicas</a></li>
+                            <li><a href="#">Información de seguros</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="sistema_de_gestiones.html">Sistema de gestiones</a>
+                    <div>
+                        <ul>
+                            <li><a href="../DevWeb_1/medicos.php">Médicos</a></li>
+                            <li><a href="../DevWeb_1/pacientes.php">Pacientes</a></li>
+                            <li><a href="../DevWeb_1/historial_medico.php">Historial Médico</a></li>
+                            <li><a href="../DevWeb_1/especialidades.php">Especialidades</a></li>
+                            <li><a href="../DevWeb_1/citas.php">Citas</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="informacion.html">Información</a>
+                    <div>
+                        <ul>
+                            <li><a href="#" onclick="mostrarInfo('historia')">Historia del hospital</a></li>
+                            <li><a href="#" onclick="mostrarInfo('mision')">Misión y visión</a></li>
+                            <li><a href="#" onclick="mostrarInfo('valores')">Valores</a></li>
+                            <li><a href="#" onclick="mostrarInfo('ubicacion')">Ubicación</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido principal -->
+    <main>
+    <section class="info-box-index">
+        <h1>Información sobre el Hospital Militar SPS</h1>
+        
+        <h2>Instalaciones</h2>
+        <p>
+            Nuestro hospital cuenta con modernas instalaciones diseñadas para brindar comodidad y seguridad a nuestros pacientes y visitantes. Disponemos de salas de espera climatizadas, consultorios equipados, laboratorio clínico, área de farmacia, sala de rayos X, sala de odontología, y espacios verdes para el bienestar de todos.
+        </p>
+        
+        <h2>Atención</h2>
+        <p>
+            Nos caracterizamos por ofrecer una atención cálida, profesional y personalizada. Nuestro equipo médico y administrativo está comprometido con el bienestar de cada paciente, garantizando un trato humano y respetuoso en cada consulta o procedimiento.
+        </p>
+        
+        <h2>Horario de Atención</h2>
+        <ul>
+            <li><strong>Lunes a Viernes:</strong> 7:00 a.m. - 5:00 p.m.</li>
+            <li><strong>Sábados:</strong> 8:00 a.m. - 12:00 m.</li>
+            <li><strong>Domingos y feriados:</strong> Cerrado</li>
+        </ul>
+        
+        <h2>Servicios de Medicina</h2>
+        <ul>
+            <li><strong>Odontología:</strong> Atención dental preventiva y correctiva, limpiezas, extracciones y tratamientos de caries.</li>
+            <li><strong>Primeros chequeos:</strong> Evaluaciones médicas generales para nuevos pacientes y chequeos de rutina.</li>
+            <li><strong>Consulta general:</strong> Diagnóstico y tratamiento de enfermedades comunes.</li>
+            <li><strong>Laboratorio clínico:</strong> Exámenes de sangre, orina y otros análisis.</li>
+            <li><strong>Rayos X y ultrasonido:</strong> Estudios de imagen para diagnóstico.</li>
+            <li><strong>Farmacia:</strong> Dispensación de medicamentos recetados.</li>
+            <li><strong>Atención de emergencias básicas:</strong> Primeros auxilios y estabilización.</li>
+            <li><strong>Vacunación:</strong> Esquemas de vacunación para niños y adultos.</li>
+            <li><strong>Orientación nutricional:</strong> Consejos y planes alimenticios personalizados.</li>
+        </ul>
+    </section>
+</main>
+    <!-- encabezado secundario -->
+    <footer>
+    <p>&copy; 2025 Repaso HTML CSS. Todos los derechos reservados.</p>
+    <p>LMH - Programación</p>
+    <p> Contacto <a href="mailto:fabiolui1966@gmail.com">fabiolui1966@gmail.com</a></p>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Militar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="Img/hospital.png" type="image/x-icon">
+</head>
+
+<script>
+function mostrarPaciente(opcion) {
+    const info = {
+        citas: `<h2>Citas médicas</h2>
+            <p>Solicita, consulta o cancela tus citas médicas de manera rápida y sencilla. Nuestro sistema está diseñado para facilitar el acceso a la atención médica que necesitas.</p>
+            <ul>
+                <li><strong>Reserva en línea o por teléfono:</strong> Puedes agendar tu cita desde nuestro portal web o llamando al <a href="tel:+50412345678">+504 1234-5678</a>.</li>
+                <li><strong>Recordatorios automáticos:</strong> Recibe notificaciones por correo electrónico y SMS para no olvidar tu cita.</li>
+                <li><strong>Atención personalizada:</strong> Nuestro personal te ayudará a elegir el especialista adecuado según tus necesidades.</li>
+                <li><strong>Reprogramación y cancelación:</strong> Modifica o cancela tu cita fácilmente sin cargos adicionales.</li>
+                <li><strong>Prioridad para adultos mayores y embarazadas:</strong> Atención preferencial para grupos vulnerables.</li>
+                <li><strong>Consultas presenciales y virtuales:</strong> Elige la modalidad que más te convenga.</li>
+            </ul>
+            <p><strong>Requisitos:</strong> Presentar documento de identidad y, si aplica, carnet de seguro médico.</p>
+            <p><strong>Horario de atención:</strong> Lunes a Viernes, 7:00 am - 5:00 pm | Sábados, 8:00 am - 12:00 pm</p>
+            <p><strong>Ubicación:</strong> Área de admisión, primer nivel del hospital.</p>`,
+
+        resultados: `<h2>Resultados de laboratorio</h2>
+            <p>Consulta tus resultados de laboratorio de forma segura y confidencial. Nuestro laboratorio cuenta con tecnología de punta y personal altamente calificado.</p>
+            <ul>
+                <li><strong>Acceso en línea:</strong> Ingresa a tu cuenta en nuestro portal para ver y descargar tus resultados.</li>
+                <li><strong>Entrega presencial:</strong> También puedes recoger tus resultados impresos en el laboratorio.</li>
+                <li><strong>Notificación automática:</strong> Recibe un aviso cuando tus resultados estén listos.</li>
+                <li><strong>Interpretación médica:</strong> Solicita una cita para que un médico te explique tus resultados.</li>
+                <li><strong>Historial de exámenes:</strong> Consulta tus exámenes anteriores y compáralos con los actuales.</li>
+                <li><strong>Privacidad garantizada:</strong> Solo tú y tu médico tratante pueden acceder a tus resultados.</li>
+            </ul>
+            <p><strong>Horario de entrega:</strong> Lunes a Viernes, 10:00 am - 4:00 pm</p>
+            <p><strong>Ubicación:</strong> Laboratorio clínico, segundo nivel.</p>`,
+
+        recetas: `<h2>Recetas médicas</h2>
+            <p>Recibe tus recetas electrónicas y consulta el historial de tus medicamentos. Nuestro sistema facilita el acceso y la renovación de tus tratamientos.</p>
+            <ul>
+                <li><strong>Recetas digitales:</strong> Recibe tus recetas por correo electrónico o descárgalas desde tu cuenta.</li>
+                <li><strong>Renovación automática:</strong> Para pacientes crónicos, puedes solicitar la renovación de tus medicamentos sin necesidad de consulta presencial.</li>
+                <li><strong>Historial de medicamentos:</strong> Consulta todas tus recetas anteriores y verifica las fechas de tus tratamientos.</li>
+                <li><strong>Orientación farmacéutica:</strong> Nuestro personal de farmacia está disponible para resolver tus dudas sobre el uso de medicamentos.</li>
+                <li><strong>Entrega en farmacia:</strong> Presenta tu receta digital o impresa para retirar tus medicamentos.</li>
+                <li><strong>Recetas para menores:</strong> Los padres o tutores pueden gestionar recetas para sus hijos.</li>
+            </ul>
+            <p><strong>Horario de farmacia:</strong> Lunes a Domingo, 7:00 am - 8:00 pm</p>
+            <p><strong>Ubicación:</strong> Área de farmacia, planta baja.</p>`,
+
+        seguros: `<h2>Información de seguros</h2>
+            <p>Conoce los convenios y requisitos para utilizar tu seguro médico en el hospital. Nuestro departamento de seguros te asesora en todo el proceso.</p>
+            <ul>
+                <li><strong>Listado de aseguradoras afiliadas:</strong> Trabajamos con las principales compañías de seguros del país.</li>
+                <li><strong>Documentación necesaria:</strong> Presenta tu póliza vigente, documento de identidad y orden médica.</li>
+                <li><strong>Asesoría personalizada:</strong> Nuestro personal te ayuda a gestionar autorizaciones y reembolsos.</li>
+                <li><strong>Trámite de pre-autorizaciones:</strong> Para procedimientos especiales, gestionamos la aprobación con tu aseguradora.</li>
+                <li><strong>Atención a emergencias:</strong> Cobertura inmediata para casos urgentes según tu póliza.</li>
+                <li><strong>Información de copagos y deducibles:</strong> Te explicamos los montos y condiciones de tu seguro.</li>
+            </ul>
+            <p><strong>Horario de atención:</strong> Lunes a Viernes, 8:00 am - 4:00 pm</p>
+            <p><strong>Ubicación:</strong> Departamento de seguros, primer nivel.</p>
+            <p><strong>Contacto:</strong> <a href="mailto:seguros@hospitalmilitar.com">seguros@hospitalmilitar.com</a> | Tel: <a href="tel:+50412345679">+504 1234-5679</a></p>`
+    };
+    document.getElementById('paciente-info').innerHTML = info[opcion] || '<h2>Opción no válida</h2>';
+}
+</script>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+
+                <li>
+                    <a href="servicios_medicos.html">Servicios médicos</a>
+                    <div>
+                        <ul>
+                            <li><a href="#">Consulta médica</a></li>
+                            <li><a href="#">Laboratorio</a></li>
+                            <li><a href="#">Farmacia</a></li>
+                            <li><a href="#">Rayos X</a></li>
+                            <li><a href="#">Ultrasonido</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="nuestros_medicos.html">Nuestros médicos</a>
+                    <div>
+                        <ul>
+                            <li><a href="#">Dr. Maynor López</a></li>
+                            <li><a href="#">Dra. Ana Pérez</a></li>
+                            <li><a href="#">Dr. Juan García</a></li>
+                            <li><a href="#">Dra. María López</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="para_pacientes.html">Para pacientes</a>
+                    <div>
+                        <ul>
+                            <li><a href="#" onclick="mostrarPaciente('citas')">Citas médicas</a></li>
+                            <li><a href="#" onclick="mostrarPaciente('resultados')">Resultados de laboratorio</a></li>
+                            <li><a href="#" onclick="mostrarPaciente('recetas')">Recetas médicas</a></li>
+                            <li><a href="#" onclick="mostrarPaciente('seguros')">Información de seguros</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="sistema_de_gestiones.html">Sistema de gestiones</a>
+                    <div>
+                        <ul>
+                            <li><a href="../DevWeb_1/medicos.php">Médicos</a></li>
+                            <li><a href="../DevWeb_1/pacientes.php">Pacientes</a></li>
+                            <li><a href="../DevWeb_1/historial_medico.php">Historial Médico</a></li>
+                            <li><a href="../DevWeb_1/especialidades.php">Especialidades</a></li>
+                            <li><a href="../DevWeb_1/citas.php">Citas</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="informacion.html">Información</a>
+                    <div>
+                        <ul>
+                            <li><a href="#">Historia del hospital</a></li>
+                            <li><a href="#">Misión y visión</a></li>
+                            <li><a href="#">Valores</a></li>
+                            <li><a href="#">Ubicación</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido principal -->
+    <main>
+    <div class="info-box-index" id="paciente-info">
+        <h2>Selecciona una opción para ver la información.</h2>
+    </div>
+</main>
+    <!-- encabezado secundario -->
+    <footer>
+    <p>&copy; 2025 Repaso HTML CSS. Todos los derechos reservados.</p>
+    <p>LMH - Programación</p>
+    <p> Contacto <a href="mailto:fabiolui1966@gmail.com">fabiolui1966@gmail.com</a></p>
+</footer>
+</body>
+
+</html>
